@@ -69,10 +69,10 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp Q &kp W &kp F &kp P &kp B           &kp J &kp L  &kp U     &kp Y   &kp BACKSPACE 
-			&kp A &kp R &kp S &kp T &kp G           &kp M &kp N  &kp E     &kp I   &kp O
-			&kp Z &kp X &kp C &kp D &kp V           &kp K &kp H  &kp COMMA &kp DOT &kp SLASH
-							&kp SPACE &kp TAB           &kp ENTER &sl SYM
+			&kp Q &kp W &kp F &kp P &kp B                                                     &kp J &kp L  &kp U     &kp Y   &kp BACKSPACE 
+			&kp A &kp R &kp S &kp T &kp G                                                     &kp M &kp N  &kp E     &kp I   &kp O
+			&mt LEFT_GUI Z &mt LEFT_ALT X &mt LEFT_CONTROL C &mt LEFT_SHIFT D &kp V           &kp K &mt RIGHT_SHIFT H  &mt RIGHT_CONTROL COMMA &mt RIGHT_ALT DOT &mt RIGHT_GUI SLASH
+							&kp SPACE &kp TAB                                                 &kp ENTER &sl SYM
 			>;
 		};
 
