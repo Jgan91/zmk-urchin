@@ -12,7 +12,7 @@
 // Layer definitions
 #define BASE 0
 #define SYM 1
-#define SETTINGS 6
+#define SETTINGS 2
 // -----------------
 
 &sk {
