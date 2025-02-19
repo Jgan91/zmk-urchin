@@ -21,25 +21,21 @@
 };
 
 &mt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <175>;
 };
 
 / {
 
-	behaviors {
-		// Enables holding the first mod-tap key
-		// by performing a tap-release-hold sequence.
-		// To use it: "&qt KEYCODE1 KEYCODE2"
-		qt: quick_tap {
-			compatible = "zmk,behavior-hold-tap";
-			label = "QUICK_TAP";
-			#binding-cells = <2>;
-			flavor = "hold-preferred";
-			tapping-term-ms = <150>;
-			quick-tap-ms = <100>;
-			bindings = <&kp>, <&kp>;
-		};
-	};
+    behaviors {
+        bmt: balanced_mod_taps {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+    };
 
 	macros {
 		// sometimes my device thinks a modifier is being held down
@@ -97,7 +93,7 @@
 			bindings = <
 			&kp Q &kp W &kp F &kp P &kp B                                                     	       &kp J &kp L  &kp U     &kp Y   &kp BACKSPACE 
 			&kp A &kp R &kp S &kp T &kp G                                                     	       &kp M &kp N  &kp E     &kp I   &kp O
-			&mt LEFT_GUI Z &mt LEFT_ALT X &mt LEFT_CONTROL C &mt LEFT_SHIFT D &mt LEFT_CONTROL V           &kp K &mt RIGHT_SHIFT H  &mt RIGHT_CONTROL COMMA &mt RIGHT_ALT DOT &mt RIGHT_GUI SLASH
+			&bmt LEFT_GUI Z &bmt LEFT_ALT X &bmt LEFT_CONTROL C &bmt LEFT_SHIFT D &bmt LEFT_CONTROL V           &kp K &bmt RIGHT_SHIFT H  &bmt RIGHT_CONTROL COMMA &bmt RIGHT_ALT DOT &bmt RIGHT_GUI SLASH
 							&kp SPACE &kp TAB                                              &kp ENTER &sl SYM
 			>;
 		};
