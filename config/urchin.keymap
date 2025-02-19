@@ -20,6 +20,9 @@
 	ignore-modifiers;
 };
 
+&mt {
+    tapping-term-ms = <150>;
+};
 
 / {
 
