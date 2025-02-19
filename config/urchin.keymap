@@ -20,10 +20,6 @@
 	ignore-modifiers;
 };
 
-&mt {
-    tapping-term-ms = <175>;
-};
-
 / {
 
     behaviors {
